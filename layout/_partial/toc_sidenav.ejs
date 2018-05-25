@@ -1,0 +1,12 @@
+<% if(theme.scheme === 'Paradox') { %>
+    
+    <% if(toc_obj.length > 0) { %>
+        <div class="mdl-cell mdl-cell--1-col">
+            <div class="sidenav-toc" style="position: fixed">
+                <h4>Content</h4>
+                <%- toc_obj %>
+            </div>
+        </div>
+    <% } %>
+
+<% } %>

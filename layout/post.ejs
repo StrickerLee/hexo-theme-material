@@ -1,6 +1,13 @@
+<!-- calculate toc first to adjust content width -->
+<% var toc_ = toc(page.content, {
+        class: 'post-toc',
+        list_number: theme.toc.linenumber || false,
+        style: 'max-height:80vh; overflow-y:scroll;'
+}) %>
+
 <!-- Post TOC -->
-<% if( (page.toc === true) || (is_post() && page.toc !== false) ) { %>
-    <%- partial('_partial/toc_button') %>
+<% if( ((page.toc === true) || (is_post() && page.toc !== false)) && theme.toc.sidenav == false ) { %>
+  <%- partial('_partial/toc_button', {toc_obj: toc_}) %>
 <% } %>
 
 <!-- Layouts -->
@@ -21,7 +28,11 @@
     <div class="material-post_container">
 
         <div class="material-post mdl-grid">
+          <% if(toc_.length > 0 && theme.toc.sidenav == true) { %>
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--11-col">
+          <% } else { %>
             <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+          <% } %>
 
                 <!-- Post Header(Thumbnail & Title) -->
                 <%- partial('_partial/post-header') %>
@@ -44,6 +55,11 @@
                     <%- partial('_partial/comment') %>
                 <% } %>
             </div>
+
+            <!-- sidenav toc -->
+            <% if( ((page.toc === true) || (is_post() && page.toc !== false)) && theme.toc.sidenav == true ) { %>
+                <%- partial('_partial/toc_sidenav', {toc_obj: toc_}) %>
+            <% } %>
 
             <!-- Post Prev & Next Nav -->
             <%- partial('_partial/post-nav') %>

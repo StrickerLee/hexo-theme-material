@@ -154,6 +154,7 @@ toc:
 #   use: choose whether the line_number of toc will show or not.
 #       Available value of "linenumber": true | false
     linenumber: true
+    sidenav: true
 
 # SNS Menu
 sns:

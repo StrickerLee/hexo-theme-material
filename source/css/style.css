@@ -15,6 +15,20 @@
 /* Global_CSS */
 /*************/
 
+/* customized */
+.sidenav-toc ol .post-toc-child {
+    margin-left: -20px;
+}
+.sidenav-toc h4 {
+    color: #727272;
+}
+
+.sidenav-toc .post-toc {
+    padding-left: 10px;
+}
+
+/* original from material */
+
 html {
     display: block;
 }

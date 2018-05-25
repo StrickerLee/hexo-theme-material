@@ -17,11 +17,7 @@
 
 
     <!-- Left aligned menu below button -->
-    <% var toc_obj = toc(page.content, {
-        class: 'post-toc',
-        list_number: theme.toc.linenumber || false,
-        style: 'max-height:80vh; overflow-y:scroll;'
-    }) %>
+
     <% if(toc_obj.length > 0) { %>
     <button id="post-toc-trigger-btn"
         class="mdl-button mdl-js-button mdl-button--icon">
@@ -32,4 +28,5 @@
         <%- toc_obj %>
     </ul>
     <% } %>
+
 <% } %>
