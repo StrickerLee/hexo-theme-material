@@ -1,0 +1,12 @@
+/* 
+ * Specific modification to be adapted to hexo-reference plugin
+ */
+
+.material-post #post-content , 
+    .material-post #post-content p {
+    overflow: visible;
+}
+
+#post-content #footnotelist ol {
+    overflow: visible;
+}

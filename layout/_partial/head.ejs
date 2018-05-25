@@ -85,6 +85,7 @@
     <% if(theme.vendors.materialcdn) { %>
         <%- cssLsload({path:(theme.vendors.materialcdn + '/css/material.min.css'),key:'material_css'}) %>
         <%- cssLsload({path:(theme.vendors.materialcdn + '/css/style.min.css'),key:'style_css'}) %>
+        <%- cssLsload({path:(theme.vendors.materialcdn + '/css/hexo-referece_specify.css'),key:'style_css'}) %>
 
         <% if (theme.prettify.enable){ %>
             <% if ( (is_post()) ) { %>
@@ -96,6 +97,8 @@
     <% } else { %>
         <%- cssLsload({path:('css/material.min.css'),key:'material_css'}) %>
         <%- cssLsload({path:('css/style.min.css'),key:'style_css'}) %>
+        <%- cssLsload({path:('css/hexo-referece_specify.css'),key:'style_css'}) %>
+
 
         <% if (theme.prettify.enable){ %>
             <% if ( (is_post()) ) { %>
