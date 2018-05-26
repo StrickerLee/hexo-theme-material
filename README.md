@@ -12,3 +12,4 @@ Modification of [hexo-material](https://github.com/viosey/hexo-theme-material) f
             toc:
                 sidenav: true
 
+- Indent paragraphs.

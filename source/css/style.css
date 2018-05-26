@@ -27,6 +27,11 @@
     padding-left: 10px;
 }
 
+.material-post #post-content p {
+    text-indent: 2em;
+}
+
+
 /* original from material */
 
 html {
