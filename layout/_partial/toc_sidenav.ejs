@@ -1,8 +1,24 @@
 <% if(theme.scheme === 'Paradox') { %>
     
     <% if(toc_obj.length > 0) { %>
+        <style>
+            .sidenav-toc-stick {
+				position: fixed;
+				top: 97px;
+            }
+        </style>
+        <script>
+           $(window).scroll(function() {
+				if ($(this).scrollTop() > 100){  
+					$('.sidenav-toc').addClass("sidenav-toc-stick");
+				}
+				else{
+					$('.sidenav-toc').removeClass("sidenav-toc-stick");
+				}
+			}); 
+        </script>
         <div class="mdl-cell mdl-cell--1-col">
-            <div class="sidenav-toc" style="position: fixed">
+            <div class="sidenav-toc">
                 <h4>Content</h4>
                 <%- toc_obj %>
             </div>
