@@ -144,6 +144,10 @@ hanabi:
 # You can also use Front-Matter `license` to override this setting.
 license: 
 
+# Numbered heading in posts
+numbered_heading: true
+
+
 # ---------------------------------------------------------------
 # Menu Settings
 # ---------------------------------------------------------------

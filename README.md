@@ -13,3 +13,7 @@ Modification of [hexo-material](https://github.com/viosey/hexo-theme-material) f
                 sidenav: true
 
 - Indent paragraphs.
+- Number headings automatically in posts.
+    + Edit \_config.yml to enable.
+            
+            numbered_headding: true

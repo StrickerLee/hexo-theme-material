@@ -24,6 +24,16 @@
     <%- partial('_widget/page-timeline') %>
 
 <% } else { %>
+
+    <!-- import auto numebred heading css -->
+	<% if (theme.numbered_heading) { %>
+      <% if (theme.vendors.materialcdn) { %>
+		<%- cssLsload({path:(theme.vendors.materialcdn + '/css/numbered_heading.min.css'),key:'material_css'}) %>
+      <% } else { %>
+        <%- cssLsload({path:('css/numbered_heading.min.css'),key:'material_css'}) %>
+      <% } %>
+	<% } %>
+
     <!-- Post Module -->
     <div class="material-post_container">
 
