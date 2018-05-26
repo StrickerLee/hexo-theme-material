@@ -10,7 +10,14 @@
         <% } %>
     <% } else { %>
         <!-- Custom Thumbnail -->
-        <div class="post_thumbnail-custom mdl-card__media mdl-color-text--grey-50 lazy" data-original="<%= post.thumbnail %>">
+        <%
+            let thumbnail_path = post.thumbnail;        
+            if (thumbnail_path[0] != '/') {
+                // relative path
+                thumbnail_path = post.path + thumbnail_path;
+            }
+        %>
+        <div class="post_thumbnail-custom mdl-card__media mdl-color-text--grey-50 lazy" data-original="<%= thumbnail_path %>">
     <% } %>
 
         <!-- Post Title -->

@@ -17,3 +17,5 @@ Modification of [hexo-material](https://github.com/viosey/hexo-theme-material) f
     + Edit \_config.yml to enable.
             
             numbered_headding: true
+
+- Fix the problem that thumbnail image in asset of a post not showing in index (due to relative path). This problem is stressed by many users in original repo, but the author seems to ignore it.
