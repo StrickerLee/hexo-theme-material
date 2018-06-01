@@ -35,6 +35,12 @@
     text-indent: 0em;
 }
 
+@media screen and (max-width: 840px) {
+    .sidenav-toc {
+        display: none;
+    }
+}
+
 
 
 /* original from material */
